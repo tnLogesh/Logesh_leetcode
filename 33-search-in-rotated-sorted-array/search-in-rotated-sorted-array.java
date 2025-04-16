@@ -5,9 +5,9 @@ class Solution {
             if(nums[i]==target){
                 return i;
             }
-            if(nums[n-i-1]==target){
-                return n-i-1;
-            }
+            // if(nums[n-i-1]==target){
+            //     return n-i-1;
+            // }
         }
         return -1;
     }
