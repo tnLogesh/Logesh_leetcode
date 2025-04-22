@@ -6,8 +6,8 @@ class Solution {
         char[]arr1=s.toCharArray();
         char[]arr2=t.toCharArray();
         for(int i=0;i<n;i++){
-            freq[s.charAt(i)-'a']++;
-            freq[t.charAt(i)-'a']--;
+            freq[arr1[i]-'a']++;
+            freq[arr2[i]-'a']--;
         }
         // for(char i:arr2){
         //     freq[i-'a']--;
