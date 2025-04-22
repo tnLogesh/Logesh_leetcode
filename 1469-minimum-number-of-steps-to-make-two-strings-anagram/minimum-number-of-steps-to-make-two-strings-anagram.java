@@ -2,10 +2,12 @@ class Solution {
     public int minSteps(String s, String t) {
         int c=0;
         int[]freq=new int[26];
-        for(char i:s.toCharArray()){
+        char[]arr1=s.toCharArray();
+        char[]arr2=t.toCharArray();
+        for(char i:arr1){
             freq[i-'a']++;
         }
-        for(char i:t.toCharArray()){
+        for(char i:arr2){
             freq[i-'a']--;
         }
         for(int i:freq){
