@@ -12,7 +12,7 @@ class Solution {
         }
         for(int i=set.size()-1;i>=0;i--){
             for(char j:set){
-                if(arr[i]-'A'==j-'a')return arr[i]+"";
+                if(arr[i]-'A'==j-'a')return Character.toString(arr[i]);
             }
         }
         return ""; 
