@@ -5,6 +5,7 @@ class Solution {
         List<Integer>l=new ArrayList<>();
         for(int i=0;i<n;i++){
             if(nums[i]==target)l.add(i);
+            else if(target<nums[i])break;
         }
         return l;
     }
