@@ -16,7 +16,7 @@ class Solution {
                 odd=Math.max(odd,freq[i]);
             }
         }
-        System.out.println(even+" "+odd);
+        //System.out.println(even+" "+odd);
         return odd-even;
     }
 }
