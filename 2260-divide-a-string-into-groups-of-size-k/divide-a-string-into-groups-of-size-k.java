@@ -5,7 +5,7 @@ class Solution {
             s+=fill;
             n=s.length();
         }
-        System.out.println(s);
+        //System.out.println(s);
         String[] arr=new String[n/k];
         int a=0;
         for(int i=0;i<n;i+=k){
