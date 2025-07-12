@@ -3,10 +3,9 @@ class Solution {
         String str="";
         for(char ch:s.toCharArray()){
             if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
-                str+=ch;
+                return true;
             }
         }
-        if(str.length()==0)return false;
-        return true;
+        return false;
     }
 }
