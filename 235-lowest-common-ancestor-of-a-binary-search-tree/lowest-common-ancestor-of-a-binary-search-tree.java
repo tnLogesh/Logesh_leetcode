@@ -13,21 +13,14 @@ class Solution {
         while(root!=null){
             if(root.val>p.val&&root.val>q.val){
                 root=root.left;
-                // lowestCommonAncestor(root,p,q);
         }
         else if(root.val<p.val&&root.val<q.val){
             root=root.right;
-            
         }
-        // else if((root.val<p.val&&root.val>q.val)||(root.val>p.val&&root.val<q.val)){
-        //     return root;
-        // }
         else{
             return root;
         }
-        //lowestCommonAncestor(root,p,q);
         }
-        
         return root;
     }
 }
