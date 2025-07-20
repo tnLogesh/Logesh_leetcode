@@ -2,11 +2,11 @@ class Solution {
     public String convertDateToBinary(String date) {
         String[]arr=date.split("-");
         String str="";
-        for(String i:arr){
-            int a=Integer.parseInt(i);
+        for(int i=0;i<arr.length;i++){
+            int a=Integer.parseInt(arr[i]);
             str+=Integer.toBinaryString(a);
-            str+="-";
+            if(i!=arr.length-1)str+="-";
         }
-        return str.substring(0,str.length()-1);
+        return str;
     }
 }
