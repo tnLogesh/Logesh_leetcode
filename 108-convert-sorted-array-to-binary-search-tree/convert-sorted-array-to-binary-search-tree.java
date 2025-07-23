@@ -16,7 +16,7 @@
 class Solution {
     public TreeNode buildBalBST(int[]arr,int start,int end){
         if(start>end)return null;
-        int mid=start+(end-start)/2;
+        int mid=(start+end)/2;
         TreeNode root=new TreeNode(arr[mid]);
         root.left=buildBalBST(arr,start,mid-1);
         root.right=buildBalBST(arr,mid+1,end);
