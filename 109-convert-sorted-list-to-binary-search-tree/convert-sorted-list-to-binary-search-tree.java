@@ -32,7 +32,7 @@ class Solution {
         root.right=buildBalBST(node,mid+1,end);
         return root;
     }
-    private void inOrder(ListNode head,List<Integer>l){
+    private void toList(ListNode head,List<Integer>l){
         while(head!=null){
             l.add(head.val);
             head=head.next;
@@ -40,7 +40,7 @@ class Solution {
     }
     public TreeNode sortedListToBST(ListNode head) {
         List<Integer>node=new ArrayList<>();
-        inOrder(head,node);
+        toList(head,node);
         return buildBalBST(node,0,node.size()-1);
     }
 }
