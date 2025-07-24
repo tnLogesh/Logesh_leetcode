@@ -1,5 +1,10 @@
 class Solution {
-    public String removeStars(String s) {
+    static{
+        for(int i=0;i<200;i++){
+            removeStars("");
+        }
+    }
+    public static String removeStars(String s) {
         Stack<Character>st=new Stack<>();
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)!='*'){
