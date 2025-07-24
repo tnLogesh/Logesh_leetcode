@@ -5,20 +5,17 @@ class Solution {
         }
     }
     public static String removeStars(String s) {
-        Stack<Character>st=new Stack<>();
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i)!='*'){
-                st.push(s.charAt(i));
-            }
-            else if(!st.isEmpty()){
-                st.pop();
-            }
-        }
         StringBuilder sb=new StringBuilder();
-        while(!st.isEmpty()){
-            sb.append(st.pop()+"");
+        int ind=-1;
+        for(int i=0;i<s.length();i++){
+            if(!sb.isEmpty()&&s.charAt(i)=='*'){
+                sb.deleteCharAt(ind);
+                ind--;
+                continue;
+            }
+            sb.append(s.charAt(i));
+            ind++;
         }
-        String str=sb.reverse().toString();
-        return str;
+        return sb.toString();
     }
 }
