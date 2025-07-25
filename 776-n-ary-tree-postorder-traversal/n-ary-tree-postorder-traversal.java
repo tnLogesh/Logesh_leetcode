@@ -18,21 +18,17 @@ class Node {
 */
 
 class Solution {
-    List<Integer> postOrder(Node cur,List<Integer>l){
-        if(cur==null){
-            return l;
+    void postOrder(Node node,List<Integer>l){
+        if(node==null)return;
+        int n=node.children.size();
+        for(int i=0;i<n;i++){
+            postOrder(node.children.get(i),l);
         }
-        for(Node i:cur.children){
-            postOrder(i,l);
-        }
-        l.add(cur.val);
-        return l;
+        l.add(node.val);
     }
     public List<Integer> postorder(Node root) {
         List<Integer>l=new ArrayList<>();
-        if(root==null){
-            return l;
-        }
-        return postOrder(root,l);
+        postOrder(root,l);
+        return l;
     }
 }
