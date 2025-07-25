@@ -4,16 +4,13 @@ class Solution {
         for(int i:nums){
             set.add(i);
         }
-        List<Integer>l=new ArrayList<>();
         int sum=0;
+        int max=Integer.MIN_VALUE;
         for(int i:set){
-            l.add(i);
-        }
-        Collections.sort(l);
-        for(int i:l){
             if(i>0)sum+=i;
+            if(max<i)max=i;
         }
-        if(sum==0)sum+=l.get(l.size()-1);
+        if(sum==0)sum=max;
         return sum;
     }
 }
