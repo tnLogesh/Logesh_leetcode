@@ -8,6 +8,7 @@ class Solution {
         sb.reverse();
         int n=0;
         int c=0;
+        System.out.println(sb);
         for(int i=0;i<sb.length();i++){
             if(sb.charAt(i)=='6'&&c==0){n=n*10+(int)'9'-'0';c++;continue;}
             n=n*10+(int)sb.charAt(i)-'0';
