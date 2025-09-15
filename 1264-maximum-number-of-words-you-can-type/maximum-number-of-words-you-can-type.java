@@ -9,11 +9,10 @@ class Solution {
             for(char ch:brokenLetters.toCharArray()){
                 String abc=ch+"";
                 if(i.contains(abc)){
-                    a++;
-                    break;
+                    continue io;
                 }
             }
-            if(a==0)c++;
+            c++;
         }
         return c;
     }
