@@ -4,11 +4,11 @@ class Solution {
         int n=words.length;
         for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
-                StringBuilder sb=new StringBuilder(words[j]);
-                sb.reverse();
-                if(words[i].equals(sb.toString())){
-                    result++;
-                    break;
+                if(words[i].charAt(0)==words[j].charAt(1)){
+                    if(words[i].charAt(1)==words[j].charAt(0)){
+                        result++;
+                        break;
+                    }
                 }
             }
         }
