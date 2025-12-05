@@ -8,8 +8,6 @@ class Solution {
                 else arr[n-i]=arr[i];
             }
         }
-        StringBuilder sb=new StringBuilder();
-        for(char i:arr)sb.append(i);
-        return sb.toString();
+        return new String(arr);
     }
 }
