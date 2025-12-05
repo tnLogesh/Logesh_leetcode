@@ -1,10 +1,5 @@
 class Solution {
-    static{
-        for(int i=0;i<10000;i++){
-            isAcronym(new ArrayList<String>(),"tnLogesh");
-        }
-    }
-    public static boolean isAcronym(List<String> words, String s) {
+    public boolean isAcronym(List<String> words, String s) {
     if(words.size()!=s.length())return false;
     int n=words.size();
     for(int i=0;i<n;i++){
