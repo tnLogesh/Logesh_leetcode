@@ -1,8 +1,8 @@
 class Solution {
-    static{
-        int[]arr=new int[]{1,2,3,4,5};
-        for(int i=0;i<100;i++)subarraySum(arr,2);
-    }
+    // static{
+    //     int[]arr=new int[]{1,2,3,4,5};
+    //     for(int i=0;i<100;i++)subarraySum(arr,2);
+    // }
     public static int subarraySum(int[] nums, int k) {
         int n=nums.length;
         int result=0;
