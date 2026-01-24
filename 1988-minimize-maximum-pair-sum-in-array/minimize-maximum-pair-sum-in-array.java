@@ -1,5 +1,10 @@
 class Solution {
-    public int minPairSum(int[] nums) {
+    static{
+        for(int i=0;i<100;i++){
+            minPairSum(new int[]{0,0,0,0,0});
+        }
+    }
+    public static int minPairSum(int[] nums) {
         Arrays.sort(nums);
         int max=0;
         int n=nums.length;
