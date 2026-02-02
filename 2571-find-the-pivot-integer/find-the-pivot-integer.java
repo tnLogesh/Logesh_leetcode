@@ -5,7 +5,6 @@ class Solution {
         int rightSum=0;
         for(int i=n;i>0;i--){
             rightSum+=i;
-            //System.out.println(leftSum+" "+rightSum);
             if(leftSum==rightSum)return i;
             leftSum-=i;
         }
