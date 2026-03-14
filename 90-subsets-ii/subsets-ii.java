@@ -1,8 +1,8 @@
 class Solution {
     public void generate(List<Integer>current,int[]nums,List<List<Integer>>l,int ind){
-        if(!l.contains(new ArrayList(current)))l.add(new ArrayList(current));
+        l.add(new ArrayList(current));
         for(int i=ind;i<nums.length;i++){
-            
+            if(i>ind&&nums[i]==nums[i-1])continue;
             current.add(nums[i]);
             generate(current,nums,l,i+1);
             current.remove(current.size()-1);
