@@ -1,11 +1,14 @@
 class Solution {
     public int firstUniqueEven(int[] nums) {
-        Map<Integer,Integer>m=new LinkedHashMap<>();
-        for(int i:nums){
-            m.put(i,m.getOrDefault(i,0)+1);
-        }
-        for(int i:m.keySet()){
-            if(i%2==0&&m.get(i)==1)return i;
+        int n=nums.length;
+        for(int i=0;i<n;i++){
+            if(nums[i]%2==0){
+                int count=0;
+                for(int j=0;j<n;j++){
+                    if(nums[i]==nums[j])count++;
+                }
+                if(count==1)return nums[i];
+            }
         }
         return -1;
     }
