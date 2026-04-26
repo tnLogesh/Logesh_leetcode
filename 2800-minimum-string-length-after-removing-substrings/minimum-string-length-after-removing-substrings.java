@@ -13,9 +13,6 @@ class Solution {
             }
             else stack.push(cur);
         }
-        // while(!stack.isEmpty()){
-        //     System.out.print(stack.pop());
-        // }
         return stack.size();
     }
 }
